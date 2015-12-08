@@ -156,7 +156,7 @@ catch(Exception e)
 			      Statement stmt = conn.createStatement();
 				Statement stmt2 = conn.createStatement();ResultSet rs=null;
 				
-					 rs= stmt2.executeQuery("select * from logindetails where USERNAME="'+uName+'" and PASSWORD="'+pwd+"'");
+					 rs= stmt2.executeQuery("select * from logindetails where USERNAME='"+uName+"' and PASSWORD='"+pwd+"'");
 				
 			      
 				int num = 0;

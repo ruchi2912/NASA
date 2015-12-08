@@ -72,7 +72,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 				request.setAttribute("msg","failure");
 				request.getRequestDispatcher("/mainPage.jsp").forward(request, response);
 			}
-		}
+		
 
 		
 		
