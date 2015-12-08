@@ -149,7 +149,7 @@ catch(Exception e)
 			
 			public HashMap queryDetailsFromTable(String uName, String pwd)
 			{
-				
+				int num = 0;
 			    ArrayList prjDetailsAL = new ArrayList();
 			    try {
 			    	conn=createCon();
@@ -159,7 +159,7 @@ catch(Exception e)
 					 rs= stmt2.executeQuery("select * from logindetails where USERNAME='"+uName+"' and PASSWORD='"+pwd+"'");
 				
 			      
-				int num = 0;
+				
 			      if (rs.next()) {
 			    	 num=num+1;
 			      }
