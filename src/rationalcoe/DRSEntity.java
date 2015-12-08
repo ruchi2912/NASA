@@ -80,39 +80,39 @@ public class DRSEntity {
     
     
 	public java.sql.Connection createCon()
-		     {
-		     	System.out.println("inside createCon  123");
-		     	
-		     	java.sql.Connection con=null;   
-		try{
-			System.out.println("invoking processVCAP..Response is "+processVCAP());
+    {
+			    	System.out.println("inside createCon  123");
+			    	
+			    	java.sql.Connection con=null;   
+			try{
+			//	System.out.println("invoking processVCAP..Response is "+processVCAP());
+				
+			  DB2SimpleDataSource dataSource = new DB2SimpleDataSource();
+			  System.out.println("-------------");
 			
-		   DB2SimpleDataSource dataSource = new DB2SimpleDataSource();
-		   System.out.println("-------------");
+			  System.out.println("databaseHost=="+databaseHost);
+			  System.out.println("port=="+port);
+			  System.out.println("databaseName="+databaseName);
+			  System.out.println("user=="+user);
+			  System.out.println("password==="+password);
+			  System.out.println("-------------" +url);
+			  
+			dataSource.setServerName("75.126.155.153");
+			dataSource.setPortNumber(50000);
+			dataSource.setDatabaseName("SQLDB");
+			dataSource.setUser("user05381");
+			dataSource.setPassword ("DGFapQgcRrtf");
+			dataSource.setDriverType(4);
+			con=dataSource.getConnection();
+			con.setAutoCommit(true);
+			}
+			catch(Exception e)
+			{
+			e.printStackTrace();
+			}
+				       return con;
 
-		   System.out.println("databaseHost=="+databaseHost);
-		   System.out.println("port=="+port);
-		   System.out.println("databaseName="+databaseName);
-		   System.out.println("user=="+user);
-		   System.out.println("password==="+password);
-		   System.out.println("-------------" +url);
-		   
-dataSource.setServerName(databaseHost);
-dataSource.setPortNumber(port);
-dataSource.setDatabaseName(databaseName);
-dataSource.setUser(user);
-dataSource.setPassword (password);
-dataSource.setDriverType(4);
-con=dataSource.getConnection();
-con.setAutoCommit(true);
-}
-catch(Exception e)
-{
-	e.printStackTrace();
-}
-			       return con;
-
-		     }
+    }
 		     
 		     public void createTable()
 		     {
