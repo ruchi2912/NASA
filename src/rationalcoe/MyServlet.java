@@ -11,11 +11,8 @@ import java.net.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+
+
 
 /**
  * Servlet implementation class for Servlet: MyServlet
@@ -81,7 +78,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 	
 	public HashMap queryFromDB(String uName, String pwd)
 	{
-		ProjectDetailsEntity prjDetailsEntity = new ProjectDetailsEntity();
+		DRSEntity prjDetailsEntity = new DRSEntity();
 		System.out.println("In queryFromDB");
 		//prjDetailsEntity.createTable();
 		HashMap returnMap = prjDetailsEntity.queryDetailsFromTable(uName,pwd);
@@ -92,8 +89,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 	
 	public void callBlueMix() 
 	{
-    try{
-		 /* URL url = new URL("http://bmcoe-nodered-hack.mybluemix.net/tts/sayit?text_to_say=Hello");
+   /* try{
+		  URL url = new URL("http://bmcoe-nodered-hack.mybluemix.net/tts/sayit?text_to_say=Hello");
       //  String query = INSERT_HERE_YOUR_URL_PARAMETERS;
 
         //make connection
@@ -118,7 +115,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
         String l = null;
         while ((l=br.readLine())!=null) {
             System.out.println(l);
-        }*/
+        }
        
        HttpClient client = new DefaultHttpClient();
 HttpGet request = new HttpGet("http://bmcoe-nodered-hack.mybluemix.net/tts/sayit?text_to_say=Hello");
@@ -144,7 +141,7 @@ HttpResponse response = client.execute(request);
 		System.out.println("Error occured");
 	}
 
-		
+		*/
 		
 	}
 }
