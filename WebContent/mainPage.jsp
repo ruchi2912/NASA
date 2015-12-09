@@ -18,9 +18,9 @@ function clicked()
 </head>
 <body bgcolor="#cococo">
 <form name="fr" method="post" action="MyServlet">
-<input type="hidden" id="name">
+<input type="hidden" id="name" name="name">
 <input type="hidden" name="actionType" id="actionType">
-<input type="hidden" id="pwd">
+<input type="hidden" id="pwd" name="pwd">
 <center>
 <table colour="#cococo">
 <tr><td>
