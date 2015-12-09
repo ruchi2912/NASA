@@ -127,7 +127,7 @@ public class DRSEntity {
 		    }
 		    else{
 		    	 returnMap.put("status","failure");
-		    	 			    Sysout.println("statu failure");
+		    	 			    System.out.println("statu failure");
 		    }
 
 			    returnMap.put("uName",uName);			
