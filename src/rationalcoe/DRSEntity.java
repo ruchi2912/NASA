@@ -40,7 +40,7 @@ public class DRSEntity {
 			    	
 			    	java.sql.Connection con=null;   
 			try{
-			  DB2SimpleDataSource dataSource = new DB2SimpleDataSource();
+			  com.ibm.db2.jcc.DB2SimpleDataSource dataSource = new com.ibm.db2.jcc.DB2SimpleDataSource();
 			  System.out.println("-------------");
 			
 			  System.out.println("databaseHost=="+databaseHost);
