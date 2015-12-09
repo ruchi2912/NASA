@@ -11,18 +11,18 @@
 </head>
 <body>
 
-<image src="/images/drs.jpg" hight="400" width="1300">
+<image src="/images/drs.jpg" hight="250" width="1300">
 <center>
 <h3>Natural Disaster Management System</h3>
 <h4><align="right"> by DEVAC </align></h4>
 
 </center>
-	<header class="_demo--heading">
+
 	
 	
 <p align=right> Welcome Admin </p>
 	
-</header>
+
 
 
 			<table><tr>
@@ -47,7 +47,7 @@
 			Natural Disaster Management
 		</h2>
 		<p>Natural Disaster Management Helpdesk</p>
-
+		
 		<div class="separate-line"></div>
 		<h2 class="base--h2">
 			We are here to help you!!
@@ -92,9 +92,12 @@
 			</div>
 		</div>
 
-</article>		
-</div>
 		
+		</div>
+		
+	</article>
+</div>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script type="text/javascript" src="js/demo.js"></script>
