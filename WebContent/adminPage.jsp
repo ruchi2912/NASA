@@ -9,7 +9,8 @@
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onLoad="">
+
 
 <image src="/images/drs.jpg" hight="250" width="1300">
 <center>
@@ -40,7 +41,7 @@
 						<tr></tr>
 </table>
 
-
+<table><tr><td>
 <div class="_demo--container">
 	<article class="_demo--content base--article">
 		<h2 class="base--h2">
@@ -92,8 +93,7 @@
 			</div>
 		</div>
 
-		
-		</div>
+	
 		
 	</article>
 </div>
