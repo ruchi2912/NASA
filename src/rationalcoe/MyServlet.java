@@ -11,7 +11,7 @@ import java.net.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+import org.json.*;
 
 
 /**
@@ -90,6 +90,20 @@ import java.io.InputStreamReader;
 		{
 		String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=6c0d138eb473421646446e21d2d53e63834ac825&start=1449014400&end=1449705599&outputMode=json&count=25&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 		System.out.println("st--"+st);
+		
+		JSONObject obj = new JSONObject(st);
+String pageName = obj.getJSONObject("pageInfo").getString("pageName");
+
+JSONArray arr = obj.getJSONObject("results").getJSONArray("docs");
+for (int i = 0; i < arr.length(); i++)
+{
+    String title = arr.getJSONObject(i).getJSONObject("source").getJSONObject("enriched").getJSONObject("url").getString("title");
+ 
+}
+		
+		
+		
+		
 		
 		}
 		else if (actionType.equalsIgnoreCase("logout"))
