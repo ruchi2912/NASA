@@ -76,14 +76,14 @@ import java.io.InputStreamReader;
 			   else
 			   {
 			   						System.out.println("Personnn");
-			   	request.getRequestDispatcher("/PersonPage.jsp").forward(request, response);
+			   	request.getRequestDispatcher("/index3.html").forward(request, response);
 			   	
 			   }
 
 				}
 			
 request.setAttribute("msg","failure");
-				request.getRequestDispatcher("/mainPage.jsp").forward(request, response);
+				request.getRequestDispatcher("/index.html").forward(request, response);
 				
 			}
 

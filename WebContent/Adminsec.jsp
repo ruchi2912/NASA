@@ -3,13 +3,13 @@
 <head>
 <script>
 function reloadGraph() {
-alert('hi');
+
    var now = new Date();
 
    document.getElementById('news').value = now.getTime();
 
    // Start new timer (1 min)
-   timeoutID = setTimeout('reloadGraph()', 10000);
+   timeoutID = setTimeout('reloadGraph()', 60000);
 }
 
 
