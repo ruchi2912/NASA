@@ -24,6 +24,8 @@ function clicked()
 <center>
 <table colour="#cococo">
 <tr><td>
+<image src="/images/flood-03.jpg">
+</td></tr><tr><td>
 User name : </td><td> <input type="text" name="login" id="login"></input>
 </td></tr><tr><td>
 Password: </td><td> <input type="password" name="password" id="password"></input>
