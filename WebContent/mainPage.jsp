@@ -52,7 +52,7 @@ Password: </td><td> <input type="password" name="password" id="password"></input
  }}%>
  
  </script>
- <center>Powered by <img src="/images/Watson-Avatar.jpg" height="40" width="40"></center>
+ <center>Powered by <img src="/images/Watson-Avatar.jpg" height="30" width="30"></center>
 </body>
 
 </html>
