@@ -10,6 +10,11 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<image src="/images/drs.jpg" hight="850" width="1350">
+<center>
+<h3>Natural Disaster Management System</h3>
+<h4><align="right"> by DEVAC </align></h4>
 	<header class="_demo--heading">
 	
 	
