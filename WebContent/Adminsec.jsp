@@ -47,7 +47,7 @@ function JsonpCallback(json)
 </head>
 <body onload="CallURL()">
 <h3> Live News Feed :</h3>
-<textarea name="news" id="news" rows="10" cols="50">
+<textarea name="news" id="news" rows="10" cols="50"></textarea>
 
 
 </body>
