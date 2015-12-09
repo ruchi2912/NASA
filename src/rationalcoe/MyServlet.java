@@ -88,7 +88,7 @@ import java.io.InputStreamReader;
 			}
 		else if (actionType.equalsIgnoreCase("rss"))
 		{
-		String st=(String)callURL("www.google.com");
+		String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=6c0d138eb473421646446e21d2d53e63834ac825&start=1449014400&end=1449705599&outputMode=json&count=25&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 		System.out.println("st--"+st);
 		
 		}
