@@ -48,7 +48,7 @@ import java.io.InputStreamReader;
 		String uName = request.getParameter("name");
 		String pwd = request.getParameter("pwd");	
 		
-		System.out.println("uName="+uName+"pass="+pwd);
+		System.out.println("uName1="+uName+"pass="+pwd);
 		
 		//actionType="gp";
 		
