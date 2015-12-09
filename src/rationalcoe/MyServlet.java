@@ -86,7 +86,12 @@ request.setAttribute("msg","failure");
 				request.getRequestDispatcher("/index.html").forward(request, response);
 				
 			}
-
+	else if (actionType.equalsIgnoreCase("rss"))
+	{
+		String st=(String)callURL("www.google.com");
+		System.out.println("st--"+st);
+		
+	}
 			}
 			else 
 			{
@@ -108,6 +113,37 @@ request.setAttribute("msg","failure");
 		HashMap returnMap = prjDetailsEntity.queryDetailsFromTable(uName,pwd);
 		return returnMap;
 		
+	}
+	
+	
+	public static String callURL(String myURL) {
+		System.out.println("Requeted URL:" + myURL);
+		StringBuilder sb = new StringBuilder();
+		URLConnection urlConn = null;
+		InputStreamReader in = null;
+		try {
+			URL url = new URL(myURL);
+			urlConn = url.openConnection();
+			if (urlConn != null)
+				urlConn.setReadTimeout(60 * 1000);
+			if (urlConn != null && urlConn.getInputStream() != null) {
+				in = new InputStreamReader(urlConn.getInputStream(),
+						Charset.defaultCharset());
+				BufferedReader bufferedReader = new BufferedReader(in);
+				if (bufferedReader != null) {
+					int cp;
+					while ((cp = bufferedReader.read()) != -1) {
+						sb.append((char) cp);
+					}
+					bufferedReader.close();
+				}
+			}
+		in.close();
+		} catch (Exception e) {
+			throw new RuntimeException("Exception while calling URL:"+ myURL, e);
+		} 
+ 
+		return sb.toString();
 	}
 	
 	
