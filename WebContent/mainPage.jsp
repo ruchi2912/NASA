@@ -6,9 +6,9 @@
 function clicked()
 {
 	alert('hi');
-	document.getElemenentById('name').value=document.getElementById('login').value;
-	document.getElemenentById('pwd').value=document.getElementById('password').value;	
-	document.getElemenentById('actionType').value="submit";
+	document.getElementById('name').value=document.getElementById('login').value;
+	document.getElementById('pwd').value=document.getElementById('password').value;	
+	document.getElementById('actionType').value="submit";
 	document.fr.submit();
 	
 }
