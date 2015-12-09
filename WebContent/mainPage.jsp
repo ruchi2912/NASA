@@ -22,8 +22,8 @@ function clicked()
 <input type="hidden" name="actionType" id="actionType">
 <input type="hidden" id="pwd" name="pwd">
 
-<image src="/images/drs.jpg" hight="850" width="1350">
-
+<image src="/images/drs.jpg" hight="650" width="1000">
+<center>
 <h3>Natural Disaster Management System</h3>
 <h4><align="right"> by DEVAC </align></h4>
 

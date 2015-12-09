@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<image src="/images/drs.jpg" hight="850" width="1350">
+<image src="/images/drs.jpg" hight="650" width="1000">
 <center>
 <h3>Natural Disaster Management System</h3>
 <h4><align="right"> by DEVAC </align></h4>
