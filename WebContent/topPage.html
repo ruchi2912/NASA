@@ -1,6 +1,24 @@
 <html>
+
+<head>
+<script>
+function logout()
+{
+		document.getElementById('actionType').value="logout";
+
+	document.fr.submit();
+	
+	
+}
+
+</script>
+</head>
+
 <body>
-<p align="right"><a href="index.html">Logout </a></p>
+<form name="fr" method="post" action="MyServlet">
+
+<input type="hidden" name="actionType" id="actionType">
+<p align="right"><input type="button" name="Logout" value="Logout" onClick="logout()"> </input></p>
 <table border="1"><tr>
 <td><img src="/images/flood1.jpg" width="700"></td>
 <td border="1"><h1><marquee behavior="alternate">Natural Disaster Management System</marquee></h1>
