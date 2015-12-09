@@ -43,7 +43,7 @@ import java.io.InputStreamReader;
 		// TODO Auto-generated method stub
 		System.out.println("inside the servelt");
 		String actionType=request.getParameter("actionType");
-		System.out.println("actionType="+actionType);
+		System.out.println("actionType123="+actionType);
 		
 		String uName = request.getParameter("name");
 		String pwd = request.getParameter("pwd");		

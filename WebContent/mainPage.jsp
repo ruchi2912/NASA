@@ -9,6 +9,7 @@ function clicked()
 	document.getElementById('name').value=document.getElementById('login').value;
 	document.getElementById('pwd').value=document.getElementById('password').value;	
 	document.getElementById('actionType').value="submit";
+	alert('val='+document.getElementById('actionType').value);
 	document.fr.submit();
 	
 }
