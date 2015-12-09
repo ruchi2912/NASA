@@ -46,7 +46,7 @@ Password: </td><td> <input type="password" name="password" id="password"></input
  <%
  
  
- }%>
+ }}%>
  
  </script>
 </body>
