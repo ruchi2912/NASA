@@ -6,9 +6,9 @@
 function clicked()
 {
 	alert('hi');
-	document.getElemenentByid('name').value=document.getElementById('login').value;
-	document.getElemenentByid('pwd').value=document.getElementById('password').value;	
-	document.getElemenentByid('actionType').value="submit";
+	document.getElemenentById('name').value=document.getElementById('login').value;
+	document.getElemenentById('pwd').value=document.getElementById('password').value;	
+	document.getElemenentById('actionType').value="submit";
 	document.fr.submit();
 	
 }
@@ -28,7 +28,7 @@ User name : </td><td> <input type="text" name="login" id="login"></input>
 Password: </td><td> <input type="password" name="password" id="password"></input>
 </td></tr>
 
-<tr> <input type="submit" value="Login" onClick="clicked()">
+<tr><td> <input type="submit" value="Login" onClick="clicked()"></td></tr>
 </table>
 
 </center>
