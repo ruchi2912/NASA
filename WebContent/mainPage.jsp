@@ -22,8 +22,8 @@ function clicked()
 <input type="hidden" name="actionType" id="actionType">
 <input type="hidden" id="pwd" name="pwd">
 <center>
-<h3>Natural Disaster Management System</h3>
-<h4><align="right"> by DEVAC </align></h4>
+
+<h4><align="right"> by DEVAC Team, TCS </align></h4>
 
 <table colour="#cococo">
 <tr><td>
