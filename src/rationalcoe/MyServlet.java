@@ -120,7 +120,7 @@ request.setAttribute("msg","failure");
 		System.out.println("Requeted URL:" + myURL);
 		StringBuilder sb = new StringBuilder();
 		//URLConnection urlConn = null;
-		InputStreamReader in = null;
+		
 		try {
 			URL url = new URL(myURL);
 URLConnection urlConnection = url.openConnection();
@@ -132,7 +132,7 @@ URLConnection urlConnection = url.openConnection();
          else
          {
             System.out.println("Please enter an HTTP URL.");
-            return;
+            return "invalid url";
          }
          BufferedReader in = new BufferedReader(
          new InputStreamReader(connection.getInputStream()));
