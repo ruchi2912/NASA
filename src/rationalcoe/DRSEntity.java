@@ -33,51 +33,7 @@ public class DRSEntity {
     private static String url = "";
 		     
 	
-	private static boolean processVCAP() {
-        // VCAP_SERVICES is a system environment variable
-        // Parse it to obtain the for DB2 connection info
-        String VCAP_SERVICES = System.getenv("VCAP_SERVICES");
-        System.out.println("VCAP_SERVICES content: " + VCAP_SERVICES);
-
-        if (VCAP_SERVICES != null) {
-            // parse the VCAP JSON structure
-            BasicDBObject obj = (BasicDBObject) JSON.parse(VCAP_SERVICES);
-            String thekey = null;
-            Set<String> keys = obj.keySet();
-            System.out.println("Searching through VCAP keys");
-            // Look for the VCAP key that holds the SQLDB information
-            for (String eachkey : keys) {
-                System.out.println("Key is: " + eachkey);
-                // Just in case the service name gets changed 
-                // to lower case in the future, use toUpperCase
-                if (eachkey.toUpperCase().contains("SQLDB")) {
-                    thekey = eachkey;
-                }
-            }
-            if (thekey == null) {
-                System.out.println("Cannot find any SQLDB service in VCAP; exit");
-                return false;
-            }
-            BasicDBList list = (BasicDBList) obj.get(thekey);
-            obj = (BasicDBObject) list.get("0");
-            System.out.println("Service found: " + obj.get("name"));
-            // parse all the credentials from the vcap env variable
-            obj = (BasicDBObject) obj.get("credentials");
-            databaseHost = (String) obj.get("host");
-            databaseName = (String) obj.get("db");
-            port = Integer.parseInt(obj.get("port").toString());
-            user = (String) obj.get("username");
-            password = (String) obj.get("password");
-            url = (String) obj.get("jdbcurl");
-        } else {
-            System.out.println("VCAP_SERVICES is null");
-            return false;
-        }
-
-        return true;
-    }
-    
-    
+	
     
 	public java.sql.Connection createCon()
     {
@@ -85,8 +41,6 @@ public class DRSEntity {
 			    	
 			    	java.sql.Connection con=null;   
 			try{
-			//	System.out.println("invoking processVCAP..Response is "+processVCAP());
-				
 			  DB2SimpleDataSource dataSource = new DB2SimpleDataSource();
 			  System.out.println("-------------");
 			
