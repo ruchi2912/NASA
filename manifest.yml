@@ -1,3 +1,8 @@
+---
+declared-services:
+  dialog-service:
+    label: dialog
+    plan: standard
 applications:
 - path: JavaHelloWorldApp.war
   memory: 512M
