@@ -22,7 +22,7 @@ function clicked()
 <input type="hidden" name="actionType" id="actionType">
 <input type="hidden" id="pwd" name="pwd">
 <center>
-<image src="/images/drs.jpg" hight="20" width="20">
+<image src="/images/drs.jpg" hight="20" width="30">
 <table colour="#cococo">
 <tr><td>
 User name : </td><td> <input type="text" name="login" id="login"></input>
