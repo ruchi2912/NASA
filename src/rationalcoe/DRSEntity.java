@@ -123,13 +123,14 @@ public class DRSEntity {
 			    System.out.println("puting in HashMap");
 			    if(num==1){
 			    returnMap.put("status","success");
-			    returnMap.put("user",uName);
+			    Sysout.println("statu success");
 		    }
 		    else{
 		    	 returnMap.put("status","failure");
+		    	 			    Sysout.println("statu failure");
 		    }
 
-			    returnMap.put("user",uName);			
+			    returnMap.put("uName",uName);			
 			 return returnMap;   
 			}
 			
