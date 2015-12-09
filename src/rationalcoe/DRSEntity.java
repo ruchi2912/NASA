@@ -12,8 +12,7 @@ import java.util.Set;
 import javax.naming.InitialContext;
 import java.util.ArrayList;
 import com.ibm.db2.jcc.DB2SimpleDataSource;
-import com.ibm.nosql.json.api.*; 
-  import com.ibm.nosql.json.util.*;
+
 //import com.ibm.samples.trade.util.Log;
 public class DRSEntity {
 
