@@ -71,7 +71,7 @@ import java.io.InputStreamReader;
 				if(userName.equals("admin"))
 				{
 					System.out.println("adminnn");
-				request.getRequestDispatcher("/adminPage.jsp").forward(request, response);
+				request.getRequestDispatcher("/index2.html").forward(request, response);
 				}
 			   else
 			   {
