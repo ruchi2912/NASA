@@ -19,7 +19,7 @@ function clicked()
 <body>
 <form name="fr" method="post" action="MyServlet">
 <input type="hidden" id="name">
-<input type="hidden" id="actionType">
+<input type="hidden" name="actionType" id="actionType">
 <input type="hidden" id="pwd">
 <center>
 <table colour="#cococo">
