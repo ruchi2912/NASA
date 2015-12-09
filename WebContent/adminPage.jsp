@@ -11,6 +11,10 @@
 </head>
 <body>
 	<header class="_demo--heading">
+	<p align="right"> Welcome <script>
+<% (String)request.getAttribute("userName");%>
+</script>
+	</p>
 	<div class="_demo--container">
 		<a class="wordmark" href="https://nodeapp123.mybluemix.net/red/">
 			<span class="wordmark--left">Natural</span>

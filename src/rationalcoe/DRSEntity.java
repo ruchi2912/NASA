@@ -114,7 +114,7 @@ public class DRSEntity {
 			      
 				
 			      if (rs.next()) {
-			    	 num=num+1;
+			    	 num=1;
 			      }
 			      rs.close();
 			    } catch (Exception e) {
@@ -123,12 +123,13 @@ public class DRSEntity {
 			    System.out.println("puting in HashMap");
 			    if(num==1){
 			    returnMap.put("status","success");
+			    returnMap.put("user",uName);
 		    }
 		    else{
 		    	 returnMap.put("status","failure");
 		    }
 
-			
+			    returnMap.put("user",uName);			
 			 return returnMap;   
 			}
 			

@@ -64,8 +64,26 @@ import java.io.InputStreamReader;
 				request.setAttribute("msg", returnMap.get("status"));
 				
 
+			String userName = (String)returnMap.get("uName");
+			request.setAttribute("userName",returnMap.get("uName"));
+			if(null!=userName)
+			{
+				if(userName.equals("admin"))
+				{
+				request.getRequestDispatcher("/adminPage.jsp").forward(request, response);
 				}
-				request.getRequestDispatcher("/nextPage.jsp").forward(request, response);
+			   else
+			   {
+			   	request.getRequestDispatcher("/PersonPage.jsp").forward(request, response);
+			   	
+			   }
+
+				}
+			
+
+				
+			}
+
 			}
 			else 
 			{
