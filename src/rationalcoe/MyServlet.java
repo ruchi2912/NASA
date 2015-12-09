@@ -80,18 +80,23 @@ import java.io.InputStreamReader;
 			   	
 			   }
 
-				}
+							}
 			
-request.setAttribute("msg","failure");
+				request.setAttribute("msg","failure");
 				request.getRequestDispatcher("/index.html").forward(request, response);
 				
 			}
-	else if (actionType.equalsIgnoreCase("rss"))
-	{
+		else if (actionType.equalsIgnoreCase("rss"))
+		{
 		String st=(String)callURL("www.google.com");
 		System.out.println("st--"+st);
 		
-	}
+		}
+		else if (actionType.equalsIgnoreCase("logout"))
+		{
+			
+			request.getRequestDispatcher("/index.html").forward(request, response);
+		}
 			}
 			else 
 			{
