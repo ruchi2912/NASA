@@ -70,12 +70,12 @@ import java.io.InputStreamReader;
 			{
 				if(userName.equals("admin"))
 				{
-					Sysout.println("adminnn");
+					System.out.println("adminnn");
 				request.getRequestDispatcher("/adminPage.jsp").forward(request, response);
 				}
 			   else
 			   {
-			   						Sysout.println("Personnn");
+			   						System.out.println("Personnn");
 			   	request.getRequestDispatcher("/PersonPage.jsp").forward(request, response);
 			   	
 			   }

@@ -123,7 +123,7 @@ public class DRSEntity {
 			    System.out.println("puting in HashMap");
 			    if(num==1){
 			    returnMap.put("status","success");
-			    Sysout.println("statu success");
+			    System.out.println("statu success");
 		    }
 		    else{
 		    	 returnMap.put("status","failure");
