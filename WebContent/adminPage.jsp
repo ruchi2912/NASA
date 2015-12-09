@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<image src="/images/drs.jpg" hight="650" width="1000">
+<image src="/images/drs.jpg" hight="400" width="1300">
 <center>
 <h3>Natural Disaster Management System</h3>
 <h4><align="right"> by DEVAC </align></h4>
@@ -25,17 +25,29 @@
 </header>
 
 
-			<div class="banner--service-links">
 			<table><tr>
 					<a href="https://nodeapp123.mybluemix.net/history?user=davedays&date=2015-09-26&sentiment=positive" class="base--a">Fetch Tweets</a></tr>
+					<tr></tr>
 					<tr><a href="https://nodeapp123.mybluemix.net/sentiments?user=davedays" class="base--a">Volunteer</a></tr>
+										<tr></tr>
 					<tr><a href="https://nodeapp123.mybluemix.net/checksentiment?user=davedays&sentiment=positive" class="base--a">Inform US</a></tr>
+										<tr></tr>
 					<tr><a href="//nodeapp123.mybluemix.net/keywords?user=davedays" class="base--a">Call Alerts</a></tr>
+										<tr></tr>
 					<tr><a href="https://nodeapp123.mybluemix.net/locationdata?user=davedays" class="base--a">Weather Information</a></tr>
+										<tr></tr>
 					<tr><a href="https://mytwitterapi123.mybluemix.net/isFollower?screen_name=davedays&key=screen_name&value=jjsociallight" class="base--a">Fraud Follower</a></tr>
-	
-<table>
-	<div class="_demo--container">
+						<tr></tr>
+</table>
+
+
+<div class="_demo--container">
+	<article class="_demo--content base--article">
+		<h2 class="base--h2">
+			Natural Disaster Management
+		</h2>
+		<p>Natural Disaster Management Helpdesk</p>
+
 		<div class="separate-line"></div>
 		<h2 class="base--h2">
 			We are here to help you!!
@@ -80,12 +92,9 @@
 			</div>
 		</div>
 
-		
-		</div>
-		
-	</article>
+</article>		
 </div>
-
+		
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script type="text/javascript" src="js/demo.js"></script>
