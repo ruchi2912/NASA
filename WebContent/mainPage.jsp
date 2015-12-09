@@ -22,7 +22,11 @@ function clicked()
 <input type="hidden" name="actionType" id="actionType">
 <input type="hidden" id="pwd" name="pwd">
 <center>
-<image src="/images/drs.jpg" hight="150" width="150">
+<image src="/images/drs.jpg" hight="850" width="750">
+
+<h3>Natural Disaster Management System</h3>
+<h4><align="right"> by DEVAC </align></h4>
+
 <table colour="#cococo">
 <tr><td>
 User name : </td><td> <input type="text" name="login" id="login"></input>
