@@ -17,6 +17,11 @@
 </script>
 </head>
 <body>
+<script>
+<% String msg = (String)request.getAttribute("data");
+%>
+ 
+ </script>
 <form name="fr" method="post" action="MyServlet">
 
 <input type="hidden" name="actionType" id="actionType">
@@ -27,11 +32,7 @@
 
 
 </form>
-<script>
-<% String msg = (String)request.getAttribute("data");
-%>
- 
- </script>
+
 
 </body>
 </html>
