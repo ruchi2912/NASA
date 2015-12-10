@@ -88,10 +88,10 @@ import org.json.*;
 			}
 		else if (actionType.equalsIgnoreCase("rss"))
 		{
-	String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=4cbf3366314a3194b4b173adc1bcf450267753fa&start=1449014400&end=1449705599&outputMode=json&count=5&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
+	String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=355266491b345cda940733f6558d1db3373c9780&start=1449014400&end=1449705599&outputMode=json&count=2&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 System.out.println("st inititated");
 		    		String title="";
-		try{
+		/*try{
 		JSONObject obj = new JSONObject(st);
 		System.out.println("after callURL printing array" + obj.getJSONObject("results"));
 
@@ -107,9 +107,9 @@ System.out.println("st inititated");
 	}catch(Exception e)
 	{
 		System.out.println("error");
-	}
+	}*/
 	
-	String data=title;
+	String data=st;
 		request.setAttribute("data",data);
 				request.getRequestDispatcher("/Adminsec.jsp").forward(request, response);
 		
