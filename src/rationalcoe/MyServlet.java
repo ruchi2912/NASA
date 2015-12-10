@@ -107,8 +107,11 @@ import org.json.*;
 	{
 		System.out.println("error");
 	}
+	
+	String data="Flood expected in Japan in next 24 hours";
 
-		
+		request.setAttribute("data",data);
+				request.getRequestDispatcher("/Adminsec.jsp").forward(request, response);
 		
 		
 		
