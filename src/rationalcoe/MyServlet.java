@@ -90,6 +90,7 @@ import org.json.*;
 		{
 		String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=4cbf3366314a3194b4b173adc1bcf450267753fa&start=1449014400&end=1449705599&outputMode=json&count=5&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 		System.out.println("st--"+st);
+		    		String title="";
 		try{
 		JSONObject obj = new JSONObject(st);
 		String pageName = obj.getJSONObject("pageInfo").getString("pageName");
@@ -98,7 +99,7 @@ import org.json.*;
 		System.out.println("Hi...");
 		for (int i = 0; i < arr.length(); i++)
 		{
-    		String title = arr.getJSONObject(i).getJSONObject("source").getJSONObject("enriched").getJSONObject("url").getString("title");
+ title = arr.getJSONObject(i).getJSONObject("source").getJSONObject("enriched").getJSONObject("url").getString("title");
  	System.out.println("title---"+i+"---"+title);
 		}
 
