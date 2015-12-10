@@ -89,7 +89,7 @@ import org.json.*;
 		else if (actionType.equalsIgnoreCase("rss"))
 		{
 		//String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=4cbf3366314a3194b4b173adc1bcf450267753fa&start=1449014400&end=1449705599&outputMode=json&count=5&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
-		System.out.println("st--"+st);
+
 		    		String title="";
 		try{
 		JSONObject obj = new JSONObject(callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=4cbf3366314a3194b4b173adc1bcf450267753fa&start=1449014400&end=1449705599&outputMode=json&count=5&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title"));
