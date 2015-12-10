@@ -95,11 +95,13 @@ import org.json.*;
 		String pageName = obj.getJSONObject("pageInfo").getString("pageName");
 
 		JSONArray arr = obj.getJSONObject("results").getJSONArray("docs");
+		System.out.println('Hi...');
 		for (int i = 0; i < arr.length(); i++)
 		{
     		String title = arr.getJSONObject(i).getJSONObject("source").getJSONObject("enriched").getJSONObject("url").getString("title");
- 
+ 	System.out.println("title---"+i+"---"+title);
 		}
+
 		
 	}catch(Exception e)
 	{
