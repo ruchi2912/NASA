@@ -19,6 +19,13 @@
 <body>
 <script>
 <% String msg = (String)request.getAttribute("data");
+if(msg!=null)
+{
+	
+}
+else{
+	msg="";
+}
 %>
  
  </script>

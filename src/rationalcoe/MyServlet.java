@@ -88,7 +88,7 @@ import org.json.*;
 			}
 		else if (actionType.equalsIgnoreCase("rss"))
 		{
-		String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=6c0d138eb473421646446e21d2d53e63834ac825&start=1449014400&end=1449705599&outputMode=json&count=25&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
+		String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=4cbf3366314a3194b4b173adc1bcf450267753fa&start=1449014400&end=1449705599&outputMode=json&count=5&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 		System.out.println("st--"+st);
 		try{
 		JSONObject obj = new JSONObject(st);
@@ -108,8 +108,7 @@ import org.json.*;
 		System.out.println("error");
 	}
 	
-	String data="Flood expected in Japan in next 24 hours";
-
+	String data=title;
 		request.setAttribute("data",data);
 				request.getRequestDispatcher("/Adminsec.jsp").forward(request, response);
 		
