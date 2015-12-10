@@ -171,7 +171,7 @@ URLConnection urlConnection = url.openConnection();
          {
             urlString += current;
          }
-         System.out.println('url=='+urlString);
+         System.out.println("url=="+urlString);
 		in.close();
 		} catch (Exception e) {
 			throw new RuntimeException("Exception while calling URL:"+ myURL, e);
