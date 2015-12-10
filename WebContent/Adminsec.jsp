@@ -6,7 +6,7 @@
 	function hit1()
 	{
 		
-		alert('hiited');
+
 		document.getElementById('actionType').value="rss";
 
 	document.fr.submit();
