@@ -88,7 +88,9 @@ import org.json.*;
 			}
 		else if (actionType.equalsIgnoreCase("rss"))
 		{
-	String st=(String)callURL("https://access.alchemyapi.com/calls/data/GetNews?apikey=355266491b345cda940733f6558d1db3373c9780&start=1449014400&end=1449705599&outputMode=json&count=2&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
+	String st="Village floods for second time in five days";
+	//
+	//https://access.alchemyapi.com/calls/data/GetNews?apikey=355266491b345cda940733f6558d1db3373c9780&start=1449014400&end=1449705599&outputMode=json&count=2&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 System.out.println("st inititated");
 		    		String title="";
 		try{
