@@ -76,6 +76,7 @@ import org.json.*;
 				}
 			   else
 			   {
+			   	//modified for only admin
 			   						request.setAttribute("msg","failure");
 				request.getRequestDispatcher("/index.html").forward(request, response);
 			   	
