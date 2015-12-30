@@ -46,7 +46,7 @@ function initMap() {
 }
 
 function geocodeAddress(geocoder, resultsMap) {
- 
+ alert('in geocode');
    <% ArrayList list = (ArrayList)request.getAttribute("list");
  if(list!=null){
    
