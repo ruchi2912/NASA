@@ -21,6 +21,30 @@ function codeAddress() {
  alert('Geocode was not successful for the following reason: ' + status);
  }
  });
+ 
+ geocoder.geocode( { 'address': "560048"}, function(results, status) {
+ if (status == google.maps.GeocoderStatus.OK) {
+ map.setCenter(results[0].geometry.location);
+ placeMarker(results[0].geometry.location,map);
+ document.getElementById("latitude").value = results[0].geometry.location.lat();
+ document.getElementById("longitude").value = results[0].geometry.location.lng();
+ 
+ } else {
+ alert('Geocode was not successful for the following reason: ' + status);
+ }
+ });
+ 
+ geocoder.geocode( { 'address': "560096"}, function(results, status) {
+ if (status == google.maps.GeocoderStatus.OK) {
+ map.setCenter(results[0].geometry.location);
+ placeMarker(results[0].geometry.location,map);
+ document.getElementById("latitude").value = results[0].geometry.location.lat();
+ document.getElementById("longitude").value = results[0].geometry.location.lng();
+ 
+ } else {
+ alert('Geocode was not successful for the following reason: ' + status);
+ }
+ });
 }
 var marker;
 function placeMarker(location,map) {
