@@ -159,6 +159,31 @@ public class DRSEntity {
 					    return 1;
 		    	 
 		     }
+		     
+		     
+		     public int alert(String pin, String mesg)
+		     {
+		    	    try {
+					conn=createCon();
+					if(pin!=null)
+					{
+					
+				      Statement stmt = conn.createStatement();
+				 Boolean flag=stmt.execute("INSERT INTO ALERT(PIN, MESG) values ("+pin+","+mesg+")");
+				
+
+				     // Boolean flag=stmt.execute("DROP TABLE PROJECTDETAILS");
+				   //   System.out.println("flag=="+flag);	
+				  
+			      }
+
+				    } catch (Exception e) {
+					      e.printStackTrace();
+					      return 0;
+					    }
+					    return 1;
+		    	 
+		     }
 			}
 
 

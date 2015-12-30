@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>HTML Frames</title>
+<script>
+<% String msg = (String)request.getAttribute("data");
+ if(msg!=null){
+    if(msg.equals("success")){System.out.println("inside");
+   
+ %>alert("Alerts sent successfully");
+ <%}
+ else if (msg.equals("failure")){%>
+ alert("Alert notification failure!"); 
+ <%
+ 
+ 
+ }}%>
+ 
+ </script>
+
+</head>
+<frameset rows="10%,90%" frameborder=NO name="tgt">
+<frame name="se" src="bottom.html" scrolling="yes" target="tgt"/>
+   <frameset Cols="40%,30%,30%" frameborder=NO>
+   <frame name="sec" src="https://radisasterapp.mybluemix.net/disaster" scrolling="yes" frameborder="0"/>
+   <frame name="third" src="map1.jsp" scrolling="no" frameborder="0"/>
+   <frameset rows="50%,50%" frameborder=NO name="tgt">
+   <frame name="fourth" src="twitterSenti.html" scrolling="no" frameborder="0"/>
+   <frame name="five" src="twitterData.html" scrolling="no" frameborder="0"/>
+   </frameset>
+ 
+ </frameset>   
+</frameset><br><br>
+<center>Powered by * <img src="/images/Watson-Avatar.jpg" height="30" width="30"></center>
+</html>

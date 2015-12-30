@@ -49,6 +49,9 @@ import org.json.*;
 		String uName = request.getParameter("name");
 		String pwd = request.getParameter("pwd");	
 		
+		String pin = request.getParameter("pin");
+		String mesg = request.getParameter("val");
+		
 		System.out.println("uName1="+uName+"pass="+pwd);
 		
 		//actionType="gp";
@@ -72,7 +75,7 @@ import org.json.*;
 				if(userName.equals("admin"))
 				{
 					System.out.println("adminnn");
-				request.getRequestDispatcher("/index2.html").forward(request, response);
+				request.getRequestDispatcher("/index2.jsp").forward(request, response);
 				}
 			   else
 			   {
@@ -154,7 +157,28 @@ System.out.println("st inititated");
 				request.getRequestDispatcher("/civdata.jsp").forward(request, response);
 			
 		}
+		else if(actionType.equalsIgnoreCase("Alert"))
+		{
 			
+		System.out.println("In ALERT ");
+		//prjDetailsEntity.createTable();
+		if((pin!=null) &&(mesg!=null) )
+		  {
+		     DRSEntity prjDetailsEntity = new DRSEntity();
+			int val = prjDetailsEntity.alert(pin,mesg);
+			if(val==1)
+		    request.setAttribute("data","success");
+		    else
+		    request.setAttribute("data","failure");
+		}
+        else{
+        	
+        	request.setAttribute("data","failure");
+        }
+			
+			
+				request.getRequestDispatcher("/index2.jsp").forward(request, response);
+		}
 			}
 			else 
 			{
