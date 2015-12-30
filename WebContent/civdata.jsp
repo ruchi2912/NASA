@@ -47,7 +47,9 @@ function initMap() {
 
 function geocodeAddress(geocoder, resultsMap) {
  alert('in geocode');
-   <% ArrayList list = (ArrayList)request.getAttribute("list");
+ 
+   
+   ArrayList list = (ArrayList)request.getAttribute("list");
  if(list!=null){
    
    for(int i=0;i<list.size();i++) 
@@ -70,8 +72,21 @@ function geocodeAddress(geocoder, resultsMap) {
 
 function query()
 {
+	  <% 
+   % String msg = (String)request.getAttribute("data");
+ if(msg!=null){
+    if(msg.equals("success")){
+    	
+	}
+}else{
+	%>
 	document.getElementById('actionType').value="qry";
 	document.fr.submit();
+	<%
+}%>
+
+
+	
 	
 }
     </script>
