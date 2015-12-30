@@ -57,22 +57,14 @@
   
     initMap();
     
-    function hit()
-    {
-    	
-    	document.getElementById('actionType').value='display';
-		document.fr.submit();
-	
-    }
-    
+       
     </script>
   </head>
   <body>
   <form name="fr" method="post" action="MyServlet">
  <input type="hidden" name="actionType" id="actionType">
      <div id="floating-panel">
-      <input id="latlng" type="text" value="40.714224,-73.961452">
-      <input id="submit" type="button" value="Reverse Geocode">
+     
     </div>
     <div id="map"></div>
     <script>
