@@ -9,7 +9,7 @@
 </head>
 <frameset rows="10%,90%" frameborder=NO name="tgt">
 <frame name="se" src="bottom.html" scrolling="no" target="mid"/>
-   <frameset Cols="40%,30%,30%" frameborder=NO name="mid">
+   <frameset Cols="35%,35%,30%" frameborder=NO name="mid">
    <frame name="sec" src="https://radisasterapp.mybluemix.net/disaster" scrolling="yes" frameborder="0"/>
    <frame name="third" src="map1.jsp" scrolling="no" frameborder="0"/>
     

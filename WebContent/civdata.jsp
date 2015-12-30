@@ -53,7 +53,7 @@ function geocodeAddress(geocoder, resultsMap) {
    ArrayList list = (ArrayList)request.getAttribute("list");
  if(list!=null){
    
-   for(int i=0;i<list.size();i++) 
+   for(int i=0;i<1;i++) 
    {
    	String pin=(String)list.get(i);
    	System.out.println("pin=="+pin);
@@ -73,30 +73,10 @@ function geocodeAddress(geocoder, resultsMap) {
   <%}}%>
 }
 
-function query()
-{
-
-	  <% 
-    String msg = (String)request.getAttribute("data");
- if(msg!=null){
-    if(msg.equals("success")){
-    	
-	}
-}else{
-	%>
-	document.getElementById('actionType').value="qry";
-	document.fr.submit();
-	<%
-}%>
-
-
-	
-	
-}
-    </script>
+       </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU0Ym8pa4_hPz55AyrPjg4g5j_1jfB3L8&signed_in=false&callback=initMap"
         async defer></script>
-         <body onload="query()">
+         <body>
          <h3>Civilian Tracking</h3>
          <form name="fr" method="post" action="MyServlet">
          <input type="hidden" name="actionType" id="actionType">

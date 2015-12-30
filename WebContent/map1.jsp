@@ -31,6 +31,7 @@
   </head>
   <body>
   <h3>Affected - Safe Zone</h3>
+  <br>
     <div id="floating-panel">
     <b>Mode of Travel: </b>
     <select id="mode">
