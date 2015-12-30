@@ -52,7 +52,7 @@ import org.json.*;
 		String pin = request.getParameter("pin");
 		String mesg = request.getParameter("val");
 		
-		System.out.println("uName1="+uName+"pass="+pwd);
+		System.out.println("uName1="+pin+"pass="+mesg);
 		
 		//actionType="gp";
 		
@@ -136,27 +136,7 @@ System.out.println("st inititated");
 				
 				
 			}
-		else if(actionType.equalsIgnoreCase("civ"))
-		{
-			HashMap returnMap=new HashMap();
-			ArrayList prjDetailsAL=new ArrayList();
-			ProjectDetailsDTO dto = new ProjectDetailsDTO();		
-				dto.setId(1001);
-				dto.setName("Guru Prasad");
-				dto.setCity("Bangalore");
-				dto.setAddress("4th Cross, K R Puram");
-				dto.setDOB("23/12/2000");
-				dto.setContact("9886393775");
-				dto.setState("Karnataka");
-				dto.setPIN("560036");
-		prjDetailsAL.add(dto);
-		returnMap.put("prjDetailsAL",prjDetailsAL);
-
-			request.setAttribute("returnMap",returnMap);			
-			request.setAttribute("data","true");
-				request.getRequestDispatcher("/civdata.jsp").forward(request, response);
-			
-		}
+		
 		else if(actionType.equalsIgnoreCase("Alert"))
 		{
 			
@@ -178,6 +158,14 @@ System.out.println("st inititated");
 			
 			
 				request.getRequestDispatcher("/index2.jsp").forward(request, response);
+		}
+		else if (actionType.equalsIgnoreCase("qry"))
+		{
+			
+			 DRSEntity prjDetailsEntity = new DRSEntity();
+			 ArrayList list = (ArrayList)prjDetailsEntity.qry();
+			 request.setAttribute("list",list);
+			request.getRequestDispatcher("/civicdata.jsp").forward(request, response);
 		}
 			}
 			else 

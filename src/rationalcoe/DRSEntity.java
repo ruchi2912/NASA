@@ -169,7 +169,9 @@ public class DRSEntity {
 					{
 					
 				      Statement stmt = conn.createStatement();
-				 Boolean flag=stmt.execute("INSERT INTO ALERT(PIN, MESG) values ("+pin+","+mesg+")");
+				      
+				      System.out.println("pin=="+pin);				      
+				 Boolean flag=stmt.execute("insert into alert values('"+pin+"','"+mesg+"')");
 				
 
 				     // Boolean flag=stmt.execute("DROP TABLE PROJECTDETAILS");
@@ -183,6 +185,42 @@ public class DRSEntity {
 					    }
 					    return 1;
 		    	 
+		     }
+		     
+		     public ArrayList qry()
+		     {
+		     	
+		     	ArrayList list = new ArrayList();
+		     	 try {
+					conn=createCon();
+				    Statement stmt = conn.createStatement();
+				      ResultSet rs=null;
+				     	      
+				
+				 rs= stmt.executeQuery("select PIN from CIVILIAN");
+				
+			      
+				
+			      while (rs.next()) {
+			    	 list.add(rs.getString("PIN"));
+			    	 
+			    	 
+			      }
+
+				     // Boolean flag=stmt.execute("DROP TABLE PROJECTDETAILS");
+				   //   System.out.println("flag=="+flag);	
+				  
+			      
+
+				    } catch (Exception e) {
+					      e.printStackTrace();
+					     
+					    }
+					    return list;
+		     	
+		     	
+		     	
+		     	
 		     }
 			}
 

@@ -15,10 +15,14 @@ function alert()
 <body>
 
 <form name="fr" method="post" action="MyServlet">
-Enter the Alert Message : <input type="text" id="val" name="val">
-Enter the Pin Code (area affected) : <input type="text" id="pin" name="pin">
-<input type="submit" name="Alert Civilian" value="Alert Civilian" onclick="alert()">
-
+<br><br>
+<p aling="center">
+<table>
+<tr><td>Enter the Alert Message : </td><td> <input type="text" id="val" name="val"></td></tr>
+<tr><td>Enter the Pin Code (area affected) : </td><td><input type="text" id="pin" name="pin"></td></tr>
+<tr><td><input type="submit" name="Alert Civilian" value="Alert Civilian" onclick="alert()"></td></tr>
+</table>
+</p>
 <input type="hidden" name="actionType" id="actionType">
 </body>
 </html>
