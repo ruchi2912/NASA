@@ -34,13 +34,14 @@
     <%@page import="java.util.ArrayList" %>
   
 function initMap() {
+	alert('within init');
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
     center: {lat: -34.397, lng: 150.644}
   });
   var geocoder = new google.maps.Geocoder();
 
-  
+  alert('invoking geocodeaddress');
     geocodeAddress(geocoder, map);
   
 }
@@ -58,7 +59,7 @@ function geocodeAddress(geocoder, resultsMap) {
    	System.out.println("pin=="+pin);
     %>
   alert('loc='+'<%=pin%>');
-  geocoder.geocode({'address': address}, function(results, status) {
+  geocoder.geocode({'address': '<%=pin%>'}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
       var marker = new google.maps.Marker({
@@ -74,7 +75,7 @@ function geocodeAddress(geocoder, resultsMap) {
 
 function query()
 {
-	alert("")
+
 	  <% 
     String msg = (String)request.getAttribute("data");
  if(msg!=null){
