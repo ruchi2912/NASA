@@ -113,7 +113,7 @@ import org.json.simple.parser.ParseException;
 			}
 		else if (actionType.equalsIgnoreCase("rss"))
 		{
-	String st="Village floods for second time in five days";
+	/*String st="Village floods for second time in five days";
 	//Below code for connecting Alchemy API News
 	//https://access.alchemyapi.com/calls/data/GetNews?apikey=&start=1449014400&end=1449705599&outputMode=json&count=2&q.enriched.url.title=O[earthquakes^cyclones^floods]&return=enriched.url.url,enriched.url.title");
 	//355266491b345cda940733f6558d1db3373c9780
@@ -129,7 +129,7 @@ System.out.println("st inititated");
 		{
  title = arr.getJSONObject(i).getJSONObject("source").getJSONObject("enriched").getJSONObject("url").getString("title");
  	System.out.println("title---"+i+"---"+title);
-		}
+	
 
 		
 	}catch(Exception e)
@@ -142,7 +142,7 @@ System.out.println("st inititated");
 				request.getRequestDispatcher("/Adminsec.jsp").forward(request, response);
 		
 		
-		
+		*/
 		}
 		else if (actionType.equalsIgnoreCase("logout"))
 		{
