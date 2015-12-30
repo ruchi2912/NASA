@@ -253,7 +253,7 @@ URLConnection urlConnection = url.openConnection();
 		return urlString;
 	}
 	
-	public void displaymp(deviceId)
+	public void displaymp(String deviceId)
 	{
 		
 		deviceId=deviceId+"?top=1";
