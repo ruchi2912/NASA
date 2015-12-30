@@ -55,10 +55,10 @@
     </script>
   </head>
   <body>
-    <!-- <div id="floating-panel">
+     <div id="floating-panel">
       <input id="latlng" type="text" value="40.714224,-73.961452">
       <input id="submit" type="button" value="Reverse Geocode">
-    </div> -->
+    </div>
     <div id="map"></div>
     <script>
 function initMap() {
