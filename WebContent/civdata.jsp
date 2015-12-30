@@ -76,7 +76,7 @@ function query()
 {
 	alert("")
 	  <% 
-   % String msg = (String)request.getAttribute("data");
+    String msg = (String)request.getAttribute("data");
  if(msg!=null){
     if(msg.equals("success")){
     	
