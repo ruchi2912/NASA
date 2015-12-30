@@ -156,8 +156,9 @@ System.out.println("st inititated");
         	request.setAttribute("data","failure");
         }
 			
-			
-				request.getRequestDispatcher("https://radisasterapp.mybluemix.net/disaster").forward(request, response);
+		
+    response.sendRedirect(response.encodeRedirectURL("https://radisasterapp.mybluemix.net/disaster"));
+			//	request.getRequestDispatcher("").forward(request, response);
 		}
 		else if (actionType.equalsIgnoreCase("qry"))
 		{
