@@ -188,7 +188,7 @@ System.out.println("st inititated");
 		}
 		else if (actionType.equalsIgnoreCase("display"))
 		{
-			
+			/*
 			 DRSEntity prjDetailsEntity = new DRSEntity();
 			 ArrayList list = (ArrayList)prjDetailsEntity.display();
 		     if(list!=null)
@@ -209,7 +209,7 @@ System.out.println("st inititated");
 			 
 			 
 			 request.setAttribute("list",list);
-			 request.setAttribute("data","success");
+			 request.setAttribute("data","success");*/
 			request.getRequestDispatcher("/DisplayMain.jsp").forward(request, response);
 		}
 			}
@@ -274,7 +274,7 @@ URLConnection urlConnection = url.openConnection();
 	public void displaymp(HttpServletRequest request,String deviceId)
 	{
 		
-		deviceId=deviceId+"?top=1";
+		/*deviceId=deviceId+"?top=1";
 		String url="https://internetofthings.ibmcloud.com/api/v0001/historian/vp51e4/iotphone/"+deviceId;
 		System.out.println("URL:"+url);
 		String name = "a-vp51e4-iei2tiq7zb";
@@ -303,10 +303,10 @@ URLConnection urlConnection = url.openConnection();
 			request.setAttribute("lat", obj1.get("lat"));
 			request.setAttribute("lng", obj1.get("lng"));
 			
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		

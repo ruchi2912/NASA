@@ -48,26 +48,20 @@
     </style>
     <script>
     
-    <% String msg = (String)request.getAttribute("data");
- if(msg!=null){
-    if(msg.equals("success")){
- %>
+  
  
  
  
- 
- 
-  var lattitude=<%=request.getAttribute("lat") %>
-    var longitude=<%=request.getAttribute("lng")%>
-    alert(lattitude);
-    alert(longitude);
+  var lattitude="12.934330";
+    var longitude="77.609649";
+  
     initMap();
     
     function hit()
     {
     	
     	document.getElementById('actionType').value='display';
-	document.fr.submit();
+		document.fr.submit();
 	
     }
     
@@ -123,17 +117,5 @@ function geocodeLatLng(geocoder, map, infowindow) {
   </body>
   
   
- <% }
- else{ %>
  
-
-      </script>
-  </head>
-  <body onLoad="hit()">
-  <form name="fr" method="post" action="MyServlet">
- <input type="hidden" name="actionType" id="actionType">
-    
-        </form>
-  </body>
-  <% } %>
 </html>
