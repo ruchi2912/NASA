@@ -20,8 +20,11 @@ function alert()
 <table>
 <tr><td>Enter the Alert Message : </td><td> <input type="text" id="val" name="val"></td></tr>
 <tr><td>Enter the Pin Code (area affected) : </td><td><input type="text" id="pin" name="pin"></td></tr>
-<tr><td><input type="submit" name="Alert Civilian" value="Alert Civilian" onclick="alert()"></td></tr>
 </table>
+<br>
+
+<input type="submit" name="Alert Civilian" value="Alert Civilian" onclick="alert()">
+
 </p>
 <input type="hidden" name="actionType" id="actionType">
 </body>
