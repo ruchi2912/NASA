@@ -55,7 +55,7 @@ function geocodeAddress(geocoder, resultsMap) {
    for(int i=0;i<list.size();i++) 
    {
     %>
-  alert('loc='+<%=list.get(i)%>);
+  alert('loc='+'<%=list.get(i)%>');
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
