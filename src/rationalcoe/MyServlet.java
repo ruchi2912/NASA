@@ -168,7 +168,7 @@ System.out.println("st inititated");
 			 DRSEntity prjDetailsEntity = new DRSEntity();
 			 ArrayList list = (ArrayList)prjDetailsEntity.qry();
 			 request.setAttribute("list",list);
-			request.getRequestDispatcher("/civicdata.jsp").forward(request, response);
+			request.getRequestDispatcher("/civdata.jsp").forward(request, response);
 		}
 		else if (actionType.equalsIgnoreCase("display"))
 		{
