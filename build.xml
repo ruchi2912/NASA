@@ -16,7 +16,9 @@
                    <pathelement location="dep-jar/org.json-20120521.jar"/>
         <pathelement location="dep-jar/javax.servlet-3.0.jar"/>
         <pathelement location="dep-jar/db2jcc.jar"/>
-
+        <pathelement location="dep-jar/jersey-client.jar"/>
+        <pathelement location="dep-jar/jersey-client.jar"/>
+                <pathelement location="dep-jar/*.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>

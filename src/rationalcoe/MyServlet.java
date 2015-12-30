@@ -197,7 +197,7 @@ System.out.println("st inititated");
 		     	{
 		     		
 		     		String devId=(String)list.get(i);
-		     		displaymp(devId);
+		     		displaymp(request,devId);
 		     		
 		     				     	}
 		     	
@@ -271,7 +271,7 @@ URLConnection urlConnection = url.openConnection();
 		return urlString;
 	}
 	
-	public void displaymp(String deviceId)
+	public void displaymp(HttpServletRequest request,String deviceId)
 	{
 		
 		deviceId=deviceId+"?top=1";
