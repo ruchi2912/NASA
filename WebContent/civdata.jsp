@@ -65,7 +65,7 @@ function geocodeAddress(geocoder, resultsMap) {
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
-  <%}%>
+  <%}}%>
 }
 
 function query()
