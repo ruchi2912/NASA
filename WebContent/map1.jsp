@@ -78,7 +78,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-5aC1_SheKjOYI2dBs7iINJfhKABwqU0&signed_in=true&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-5aC1_SheKjOYI2dBs7iINJfhKABwqU0&callback=initMap"
         async defer></script>
   </body>
 </html>
