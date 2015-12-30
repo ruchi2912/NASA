@@ -5,12 +5,12 @@
  <meta charset="utf-8">
  <title>Geocoding service</title>
  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
  <script>
 var geocoder;
 var map;
 function codeAddress() {
- var address = document.getElementById('address').value;
- geocoder.geocode( { 'address': address}, function(results, status) {
+ geocoder.geocode( { 'address': "560036"}, function(results, status) {
  if (status == google.maps.GeocoderStatus.OK) {
  map.setCenter(results[0].geometry.location);
  placeMarker(results[0].geometry.location,map);
@@ -52,13 +52,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
  </script>
  </head>
- <body>
+ <body onload="codeAddress()">
+
  <div id="panel">
- <input id="address" type="textbox" value="Sydney, NSW">
- <input type="button" value="Geocode" onclick="codeAddress()">
+
+ 
  </div>
- <div id="map-canvas" style="width: 300px; height: 300px"></div>
- <input type="text" name="latitude" id="latitude"/>
- <input type="text" name="longitude" id="longitude"/>
+
+ <div id="map-canvas" style="width: 500px; height: 400px"></div>
+ <input type="hidden" name="latitude" id="latitude"/>
+ <input type="hidden" name="longitude" id="longitude"/>
  </body>
 </html>
