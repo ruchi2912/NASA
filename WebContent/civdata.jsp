@@ -54,7 +54,7 @@ function geocodeAddress(geocoder, resultsMap) {
    
    for(int i=0;i<list.size();i++) 
    {
-   	String pin=list.get(i);
+   	String pin=(String)list.get(i);
    	System.out.println("pin=="+pin);
     %>
   alert('loc='+'<%=pin%>');
