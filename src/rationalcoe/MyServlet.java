@@ -157,7 +157,7 @@ System.out.println("st inititated");
         }
 			
 			
-				request.getRequestDispatcher("/index2.jsp").forward(request, response);
+				request.getRequestDispatcher("https://radisasterapp.mybluemix.net/disaster").forward(request, response);
 		}
 		else if (actionType.equalsIgnoreCase("qry"))
 		{
