@@ -168,6 +168,32 @@ System.out.println("st inititated");
 			 request.setAttribute("list",list);
 			request.getRequestDispatcher("/civicdata.jsp").forward(request, response);
 		}
+		else if (actionType.equalsIgnoreCase("display"))
+		{
+			
+			 DRSEntity prjDetailsEntity = new DRSEntity();
+			 ArrayList list = (ArrayList)prjDetailsEntity.display();
+		     if(list!=null)
+		     {
+		     	for(int i=0;i<1;i++)
+		     	{
+		     		
+		     		String devId=(String)list.get(i);
+		     		displaymp(devId);
+		     		
+		     				     	}
+		     	
+		     	
+		     	
+		     }
+			 
+			 
+			 
+			 
+			 request.setAttribute("list",list);
+			 request.setAttribute("data","success");
+			request.getRequestDispatcher("/DisplayMain.jsp").forward(request, response);
+		}
 			}
 			else 
 			{
@@ -226,6 +252,48 @@ URLConnection urlConnection = url.openConnection();
  
 		return urlString;
 	}
+	
+	public void displaymp(deviceId)
+	{
+		
+		deviceId=deviceId+"?top=1";
+		String url="https://internetofthings.ibmcloud.com/api/v0001/historian/vp51e4/iotphone/"+deviceId;
+		System.out.println("URL:"+url);
+		String name = "a-vp51e4-iei2tiq7zb";
+		String password = "3eJXlGC)hRBR67SFWI";
+
+		HttpAuthenticationFeature feature = HttpAuthenticationFeature.basic(name, password);
+
+		final Client client = ClientBuilder.newClient();
+		client.register(feature);    
+
+		//Client client=ClientBuilder.newClient();
+		WebTarget target=client.target(url);
+		
+		String returnedValue=target.request(MediaType.APPLICATION_JSON).get(String.class);
+				
+				//"[{\"evt_type\":\"sensorData\",\"timestamp\":{\"$date\":1450969041570},\"evt\":{\"id\":\"sarvendrak1\",\"ts\":1450969040392,\"lat\":12.9860293,\"lng\":77.7440598,\"ax\":0.08,\"ay\":-0.06,\"az\":0.01,\"oa\":14.88,\"ob\":23.22,\"og\":-2.45}}]";
+		System.out.println("returned value:"+returnedValue);
+		JSONParser parser = new JSONParser();
+		try {
+			JSONArray retArr=(JSONArray) parser.parse(returnedValue);
+			System.out.println("jsonarr:"+retArr);
+			JSONObject obj=(JSONObject) retArr.get(0);
+			JSONObject obj1=(JSONObject) obj.get("evt");
+			System.out.println("lat:"+obj1.get("lat"));
+			System.out.println("lng:"+obj1.get("lng"));
+			request.setAttribute("lat", obj1.get("lat"));
+			request.setAttribute("lng", obj1.get("lng"));
+			
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
 	
 	
 	public void callBlueMix() 

@@ -47,14 +47,35 @@
       }
     </style>
     <script>
-    var lattitude=<%=request.getAttribute("lat") %>
+    
+    <% String msg = (String)request.getAttribute("data");
+ if(msg!=null){
+    if(msg.equals("success")){
+ %>
+ 
+ 
+ 
+ 
+ 
+  var lattitude=<%=request.getAttribute("lat") %>
     var longitude=<%=request.getAttribute("lng")%>
     alert(lattitude);
     alert(longitude);
     initMap();
+    
+    function hit()
+    {
+    	
+    	document.getElementById('actionType').value='display';
+	document.fr.submit();
+	
+    }
+    
     </script>
   </head>
   <body>
+  <form name="fr" method="post" action="MyServlet">
+ <input type="hidden" name="actionType" id="actionType">
      <div id="floating-panel">
       <input id="latlng" type="text" value="40.714224,-73.961452">
       <input id="submit" type="button" value="Reverse Geocode">
@@ -98,5 +119,21 @@ function geocodeLatLng(geocoder, map, infowindow) {
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU0Ym8pa4_hPz55AyrPjg4g5j_1jfB3L8&signed_in=false&callback=initMap"
         async defer></script>
+        </form>
   </body>
+  
+  
+ <% }
+ else{ %>
+ 
+
+      </script>
+  </head>
+  <body onLoad="hit()">
+  <form name="fr" method="post" action="MyServlet">
+ <input type="hidden" name="actionType" id="actionType">
+    
+        </form>
+  </body>
+  <% } %>
 </html>

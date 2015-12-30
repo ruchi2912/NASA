@@ -222,6 +222,43 @@ public class DRSEntity {
 		     	
 		     	
 		     }
+		     
+		     
+		       public ArrayList display()
+		     {
+		     	
+		     	ArrayList list = new ArrayList();
+		     	 try {
+					conn=createCon();
+				    Statement stmt = conn.createStatement();
+				      ResultSet rs=null;
+				     	      
+				
+				 rs= stmt.executeQuery("select DID from EMERGENCY");
+				
+			      
+				
+			      while (rs.next()) {
+			    	 list.add(rs.getString("DID"));
+			    	 
+			    	 
+			      }
+
+				     // Boolean flag=stmt.execute("DROP TABLE PROJECTDETAILS");
+				   //   System.out.println("flag=="+flag);	
+				  
+			      
+
+				    } catch (Exception e) {
+					      e.printStackTrace();
+					     
+					    }
+					    return list;
+		     	
+		     	
+		     	
+		     	
+		     }
 			}
 
 
