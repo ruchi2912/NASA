@@ -54,8 +54,10 @@ function geocodeAddress(geocoder, resultsMap) {
    
    for(int i=0;i<list.size();i++) 
    {
+   	String pin=list.get(i);
+   	System.out.println("pin=="+pin);
     %>
-  alert('loc='+'<%=list.get(i)%>');
+  alert('loc='+'<%=pin%>');
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
@@ -93,7 +95,7 @@ function query()
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU0Ym8pa4_hPz55AyrPjg4g5j_1jfB3L8&signed_in=false&callback=initMap"
         async defer></script>
          <body onload="query()">
-         
+         <h3>Civilian Tracking</h3>
          <form name="fr" method="post" action="MyServlet">
          <input type="hidden" name="actionType" id="actionType">
     <div id="floating-panel">
