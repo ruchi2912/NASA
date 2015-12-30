@@ -16,7 +16,7 @@ function alert()
 
 <form name="fr" method="post" action="MyServlet">
 <br><br>
-<p aling="center">
+<p align="center">
 <table>
 <tr><td>Enter the Alert Message : </td><td> <input type="text" id="val" name="val"></td></tr>
 <tr><td>Enter the Pin Code (area affected) : </td><td><input type="text" id="pin" name="pin"></td></tr>

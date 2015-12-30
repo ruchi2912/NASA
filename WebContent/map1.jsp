@@ -1,97 +1,84 @@
 <!DOCTYPE html>
-<html> 
-<head> 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
- 
-
-  <title>Google Maps Multiple Markers</title> 
-  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-</head> 
-<body>
-
-<h3>Incident Location </h3>
-
-  <div id="map" style="width: 380px; height: 450px;"></div>
-  
-  <script>
-    // Define your locations: HTML content for the info window, latitude, longitude
-    var locations = [
-      ['<h4></h4>', 12.9211031, 77.6133985],
-      ['<h4></h4>', 12.9609857, 77.6387316],
-    //  ['<h4>Cronulla Beach</h4>', -34.028249, 151.157507],
-    //  ['<h4>Manly Beach</h4>', -33.80010128657071, 151.28747820854187],
-    //  ['<h4>Maroubra Beach</h4>', -33.950198, 151.259302]
-    ];
-    
-    // Setup the different icons and shadows
-    var iconURLPrefix = 'http://maps.google.com/mapfiles/ms/icons/';
-    
-    var icons = [
-      iconURLPrefix + 'red-dot.png',
-      iconURLPrefix + 'green-dot.png',
-      iconURLPrefix + 'blue-dot.png',
-      iconURLPrefix + 'orange-dot.png',
-      iconURLPrefix + 'purple-dot.png',
-      iconURLPrefix + 'pink-dot.png',      
-      iconURLPrefix + 'yellow-dot.png'
-    ]
-    var iconsLength = icons.length;
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
-      center: new google.maps.LatLng(-37.92, 151.25),
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControl: false,
-      streetViewControl: false,
-      panControl: false,
-      zoomControlOptions: {
-         position: google.maps.ControlPosition.LEFT_BOTTOM
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Travel modes in directions</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
-    });
-
-    var infowindow = new google.maps.InfoWindow({
-      maxWidth: 160
-    });
-
-    var markers = new Array();
-    
-    var iconCounter = 0;
-    
-    // Add the markers and infowindows to the map
-    for (var i = 0; i < locations.length; i++) {  
-      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map,
-        icon: icons[0]
-      });
-
-      markers.push(marker);
-
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-      
-      iconCounter++;
-      // We only have a limited number of possible icon colors, so we may have to restart the counter
-      if(iconCounter >= iconsLength) {
-      	iconCounter = 0;
+      #map {
+        height: 100%;
       }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
+    <div id="map"></div>
+    <script>
+function initMap() {
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+  var directionsService = new google.maps.DirectionsService;
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: {lat: 12.9211031, lng: 77.6133985}
+  });
+  directionsDisplay.setMap(map);
+
+  calculateAndDisplayRoute(directionsService, directionsDisplay);
+  document.getElementById('mode').addEventListener('change', function() {
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
+  });
+}
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+  var selectedMode = document.getElementById('mode').value;
+  directionsService.route({
+
+
+    origin: {lat : 12.9211031, lng: 77.6133985},  // User Provided.
+    destination: {lat : 12.9609857, lng : 77.6387316},  // Safe House
+
+    // Note that Javascript allows us to access the constant
+    // using square brackets and a string value as its
+    // "property."
+    travelMode: google.maps.TravelMode[selectedMode]
+  }, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    } else {
+      window.alert('Directions request failed due to ' + status);
     }
+  });
+}
 
-    function autoCenter() {
-      //  Create a new viewpoint bound
-      var bounds = new google.maps.LatLngBounds();
-      //  Go through each...
-      for (var i = 0; i < markers.length; i++) {  
-				bounds.extend(markers[i].position);
-      }
-      //  Fit these bounds to the map
-      map.fitBounds(bounds);
-    }
-    autoCenter();
-  </script> 
-</body>
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-5aC1_SheKjOYI2dBs7iINJfhKABwqU0&signed_in=true&callback=initMap"
+        async defer></script>
+  </body>
 </html>
