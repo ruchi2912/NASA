@@ -25,7 +25,7 @@
    <frame name="third" src="map1.jsp" scrolling="no" frameborder="0"/>
    <frameset rows="50%,50%" frameborder=NO name="tgt">
    <frame name="fourth" src="twitterSenti.html" scrolling="no" frameborder="0"/>
-   <frame name="five" src="twitterData.html" scrolling="no" frameborder="0"/>
+   <frame name="five" src="http://radisasterapp.mybluemix.net/tofaw" scrolling="no" frameborder="0"/>
    </frameset>
  
  </frameset>   
