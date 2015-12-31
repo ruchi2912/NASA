@@ -32,6 +32,7 @@ User name : </td><td> <input type="text" name="login" id="login"></input>
 Password: </td><td> <input type="password" name="password" id="password"></input>
 </td></tr>
 </table>
+<br>
 <input type="submit" value="Login" onClick="clicked()">
 
 </center>
