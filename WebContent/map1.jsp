@@ -33,6 +33,7 @@
   <h3>Affected - Safe Zone</h3>
   <br><br><br>
     <div id="floating-panel">
+    <br><br>
     <b>Mode of Travel: </b>
     <select id="mode">
       <option value="DRIVING">Driving</option>
