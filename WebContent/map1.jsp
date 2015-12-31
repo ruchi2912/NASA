@@ -30,11 +30,10 @@
     </style>
   </head>
   <body>
-  <h3>Affected - Safe Zone</h3>
+  <h4>Affected - Safe Zone</h4>
   <br><br><br>
     <div id="floating-panel">
-    <br><br>
-    <b>Mode of Travel: </b>
+       <b>Mode of Travel: </b>
     <select id="mode">
       <option value="DRIVING">Driving</option>
       <option value="WALKING">Walking</option>
