@@ -81,17 +81,16 @@ import java.io.IOException;
 				}
 			   else
 			   {
-			   	//modified for only admin
-			   						request.setAttribute("msg","failure");
-				request.getRequestDispatcher("/mainPage.jsp").forward(request, response);
+			   						System.out.println("Personnn");
+			   	request.getRequestDispatcher("/index3.html").forward(request, response);
 			   	
 			   }
 
-							}
-			else{
-			request.setAttribute("msg","failure");
-				request.getRequestDispatcher("/index.html").forward(request, response);
+				
 			}
+			
+				request.setAttribute("msg","failure");
+				request.getRequestDispatcher("/index.html").forward(request, response);
 
 				
 			}
