@@ -23,7 +23,7 @@ function clicked()
 <input type="hidden" id="pwd" name="pwd">
 <center>
 
-<h4><align="right"> by DEVAC Team, TCS </align></h4>
+<h4><align="right"> by IBM SW ATU Team, TCS </align></h4>
 <br><br><br>
 <table colour="#cococo">
 <tr><td>
