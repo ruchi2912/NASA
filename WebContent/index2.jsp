@@ -25,18 +25,7 @@
 		</div>
 	</div>
 
-    </div>
-	
-		<div id="sidebarright">
-			<div id="box1">
-				
-			<div>				
-				<iframe name="content2" width="550" height="420" src="twitterData.html">
-			</iframe>	
-			</div>						
-				
-		</div>
-	</div>
+
 
 
  
