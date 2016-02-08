@@ -7,8 +7,8 @@
  </script>
 
 </head>
-<frameset rows="10%,90%" frameborder=NO name="tgt">
-<frame name="se" src="bottom.html" scrolling="no" target="mid"/>
+<frameset Cols="20%,80%" frameborder=NO name="tgt">
+<frame name="se" src="bottom1.html" scrolling="no" target="mid"/>
    <frameset Cols="35%,35%,30%" frameborder=NO name="mid">
    <frame name="sec" src="http://ravisual.mybluemix.net/disaster" scrolling="yes" frameborder="0"/>
    <frame name="third" src="maps1.html" scrolling="no" frameborder="0"/>
