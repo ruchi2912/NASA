@@ -12,18 +12,9 @@
    <frameset Cols="50%,50%" frameborder=NO name="mid">
  
    <frame name="second" src="reports.html" scrolling="no" frameborder="0"/>
-    </div>
-	
-		<div id="sidebarright">
-			<div id="box1">
-				
-			<div>				
-				<iframe name="content2" width="550" height="420" src="twitterData.html">
-			</iframe>	
-			</div>						
-				
-		</div>
-	</div>
+ 			
+   <frame name="content2" width="550" height="420" src="twitterData.html">
+		
 
 
 
