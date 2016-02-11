@@ -25,7 +25,7 @@ function clicked()
 
 <h4><align="right"> by IBM SW ATU Team, TCS </align></h4>
 <br><br><br>
-<table colour="#cococo">
+<table colour="WHITE">
 <tr><td>
 User name : </td><td> <input type="text" name="login" id="login"></input>
 </td></tr><tr><td>
