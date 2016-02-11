@@ -13,7 +13,7 @@
 <frameset Cols="25%,5%,40%,5% ,25%" frameborder=YES name="tgt">
 <frame name="x1" src="bottom2.html" scrolling="yes" target=="mid"/>
   <frame name="x2" src="" scrolling="no" frameborder="0"/>d"/>
-   <frame name="x3" src="report3.html" scrolling="no" frameborder="0"/>
+   <frame name="x3" src="report3.html" scrolling="yes" frameborder="0"/>
 
     <frame name="x4" src="" scrolling="no" frameborder="0"/>d"/>
     
