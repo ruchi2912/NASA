@@ -10,7 +10,7 @@
 <frameset rows="10% ,90%"  frameborder=YES name="tgt">
 
  <frame name="a4" src="" scrolling="yes" frameborder="0"/>d"/>
-<frameset Cols="20%,10%,40%,10% ,20%" frameborder=YES name="tgt">
+<frameset Cols="25%,5%,40%,5% ,25%" frameborder=YES name="tgt">
 <frame name="x1" src="bottom2.html" scrolling="yes" target=="mid"/>
   <frame name="x2" src="" scrolling="no" frameborder="0"/>d"/>
    <frame name="x3" src="report3.html" scrolling="no" frameborder="0"/>
