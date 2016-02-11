@@ -7,14 +7,14 @@
  </script>
 
 </head>
-<frameset Cols="20%,10%,70%" frameborder=NO name="tgt">
-<frame name="x" src="bottom1.html" scrolling="no" target="mi
-  <frame name="y" src="" scrolling="no" frameborder="0"/>d"/>
-   <frameset Cols="75%,25%" frameborder=NO name="mid">
- 
-   <frame name="a" src="reports.html" scrolling="no" frameborder="0"/>
+<frameset Cols="20%,10%,40%,10% ,20%" frameborder=YES name="tgt">
+<frame name="x1" src="bottom1.html" scrolling="no" target=="mid"/>
+  <frame name="x2" src="" scrolling="no" frameborder="0"/>d"/>
+   <frame name="x3" src="reports.html" scrolling="no" frameborder="0"/>
+
+    <frame name="x4" src="" scrolling="no" frameborder="0"/>d"/>
     
-   <frame name="content2" width="400" height="420" src="twitterData.html">
+   <frame name="x5" width="400" height="420" src="twitterData.html">
 		
 
 
