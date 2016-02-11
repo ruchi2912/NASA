@@ -7,6 +7,9 @@
  </script>
 
 </head>
+<frameset rows="25%,10% ,65%" name="full" frameborder=YES>
+<frame name="top" src="topPage.html" scrolling="no" target="top"/>
+ <frame name="a4" src="" scrolling="no" frameborder="0"/>d"/>
 <frameset Cols="20%,10%,40%,10% ,20%" frameborder=YES name="tgt">
 <frame name="x1" src="bottom1.html" scrolling="no" target=="mid"/>
   <frame name="x2" src="" scrolling="no" frameborder="0"/>d"/>
