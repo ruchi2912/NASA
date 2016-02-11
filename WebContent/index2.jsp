@@ -7,9 +7,10 @@
  </script>
 
 </head>
-<frameset Cols="20%,80%" frameborder=NO name="tgt">
-<frame name="se" src="bottom1.html" scrolling="no" target="mid"/>
-   <frameset Cols="50%,15%,35%" frameborder=NO name="mid">
+<frameset Cols="20%,10%,70%" frameborder=NO name="tgt">
+<frame name="se" src="bottom1.html" scrolling="no" target="mi
+  <frame name="x" src="" scrolling="no" frameborder="0"/>d"/>
+   <frameset Cols="60%,10%,30%" frameborder=NO name="mid">
  
    <frame name="second" src="reports.html" scrolling="no" frameborder="0"/>
       <frame name="second" src="" scrolling="no" frameborder="0"/>
