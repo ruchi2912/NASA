@@ -16,7 +16,7 @@ function clicked()
 
 </script>
 </head>
-<body bgcolor="#cococo">
+<body bgcolor="WHITE">
 <form name="fr" method="post" action="MyServlet">
 <input type="hidden" id="name" name="name">
 <input type="hidden" name="actionType" id="actionType">
