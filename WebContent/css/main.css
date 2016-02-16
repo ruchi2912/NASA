@@ -1555,6 +1555,10 @@
 		width: device-width;
 	}
 
+header {
+				height: 160px;
+				background-image: url("images/i7.jpg");
+				}
 	body {
 		-ms-overflow-style: scrollbar;
 	}
@@ -1568,7 +1572,7 @@
 	}
 
 	body {
-		background: #fff;
+		background: 'WHITE';
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
