@@ -2,8 +2,31 @@
 
 
 <head>
+<script>
+function clicked()
+{
 
-		<title>HTML5 Layout</title>
+	document.getElementById('name').value=document.getElementById('login').value;
+	document.getElementById('pwd').value=document.getElementById('password').value;	
+	document.getElementById('actionType').value="submit";
+
+	document.fr.submit();
+	
+}
+
+</script>
+</head>
+
+
+		
+<body bgcolor="WHITE">
+<form name="fr" method="post" action="MyServlet">
+<input type="hidden" id="name" name="name">
+<input type="hidden" name="actionType" id="actionType">
+<input type="hidden" id="pwd" name="pwd">
+
+
+<title>HTML5 Layout</title>
 		<style type="text/css">
 			header, section, footer, aside, nav, article, figure, figcaption {
 				display: block;}
@@ -93,25 +116,6 @@
 				padding: 7px 0px 0px 20px;}
 		</style>
 	
-<script>
-function clicked()
-{
-
-	document.getElementById('name').value=document.getElementById('login').value;
-	document.getElementById('pwd').value=document.getElementById('password').value;	
-	document.getElementById('actionType').value="submit";
-
-	document.fr.submit();
-	
-}
-
-</script>
-</head>
-<body bgcolor="WHITE">
-<form name="fr" method="post" action="MyServlet">
-<input type="hidden" id="name" name="name">
-<input type="hidden" name="actionType" id="actionType">
-<input type="hidden" id="pwd" name="pwd">
 <center>
 
 <h4><align="right"> by IBM SW ATU Team, TCS </align></h4>
