@@ -1,17 +1,15 @@
-This README.md file is displayed on your project page. You should edit this 
-file to describe your project, including instructions for building and 
-running the project, pointers to the license under which you are making the 
-project available, and anything else you think would be useful for others to
-know.
+Overview :
+In the era of cognitive computing and machine learning, We have reached to many planet like Moon ,Mars etc.
+But still there is a group of people o earth called " Pastoralism" who is facing lot of challenges.
+I would like to work on Earth(Emobile Pastoralism) challenges and want to build some web applications to help Pastrolism as well as Agriculture industry using Machine learning capabilities.
 
-We have created an empty license.txt file for you. Well, actually, it says,
-"<Replace this text with the license you've chosen for your project.>" We 
-recommend you edit this and include text for license terms under which you're
-making your code available. A good resource for open source licenses is the 
-[Open Source Initiative](http://opensource.org/).
+1) Virtual assistance for Postoralism Women which can guide them during pregnancy and reduce the maternal mortality rates.
 
-Be sure to update your project's profile with a short description and 
-eye-catching graphic.
+Application link : http://rainsurancedemo.mybluemix.net/(Recording attached)
+2)Using cognitive computing to help farmers to select the right crop based on the various factors.(recording attached)
 
-Finally, consider defining some sprints and work items in Track & Plan to give 
-interested developers a sense of your cadence and upcoming enhancements.
+http://rawatsonnode.mybluemix.net/tofaw (recording attached)
+
+3) Using Sensor and IOT in Agriculture: 
+(Recording and PPT Attached)
+
